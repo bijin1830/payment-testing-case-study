@@ -1,0 +1,16 @@
+Test Case ID,Module,Scenario,Precondition,Expected Result,Priority
+TC-PAY-001,Purchase,Successful contact purchase,Terminal online and supported test card available,Approved result with correct amount and unique reference,High
+TC-PAY-002,Purchase,Issuer decline,Host/test setup returns decline,Decline shown correctly and not included as approved sale,High
+TC-PAY-003,Purchase,Communication loss after request,Transaction initiated and network interruption can be simulated,Safe timeout/recovery without duplicate financial posting,Critical
+TC-PAY-004,Void,Void approved same-batch transaction,Eligible approved purchase exists,Void succeeds and original transaction is linked/updated,High
+TC-PAY-005,Refund,Successful full refund,Eligible transaction/test rules available,Refund succeeds and is reported separately from sale,High
+TC-PAY-006,Refund,Invalid refund reference,Invalid synthetic reference used,Refund rejected safely with clear error,Medium
+TC-PAY-007,Contactless,Successful tap transaction,Contactless enabled and supported test card/device available,Correct contactless flow and final result,High
+TC-PAY-008,Fallback,Allowed fallback after chip read failure,Fallback supported by test configuration,Interface change occurs only when permitted and entry mode is recorded,High
+TC-PAY-009,Reversal,Uncertain state after host processing,Communication loss can be simulated,Configured reversal/recovery prevents duplicate debit,Critical
+TC-PAY-010,Settlement,Successful batch settlement,Approved batch transactions exist,Batch totals are correct and settlement succeeds,Critical
+TC-PAY-011,Settlement,No batch available,No eligible transactions in current batch,Empty batch handled gracefully,Low
+TC-PAY-012,ECR,Successful ECR purchase,ECR connected to POS,Request and final response map correctly end to end,High
+TC-PAY-013,ECR,POS approved but ECR misses response,ECR/POS timeout can be simulated,Recovery identifies original outcome and prevents duplicate attempt,Critical
+TC-PAY-014,CVM,Incorrect PIN,Online PIN test condition available,Correct decline/error is shown and response is mapped accurately,High
+TC-PAY-015,Resilience,Customer cancels transaction,Transaction is in progress,Transaction stops safely and consistent cancel result returns to all layers,Medium
