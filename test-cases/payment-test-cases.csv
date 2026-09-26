@@ -14,3 +14,10 @@ TC-PAY-012,ECR,Successful ECR purchase,ECR connected to POS,Request and final re
 TC-PAY-013,ECR,POS approved but ECR misses response,ECR/POS timeout can be simulated,Recovery identifies original outcome and prevents duplicate attempt,Critical
 TC-PAY-014,CVM,Incorrect PIN,Online PIN test condition available,Correct decline/error is shown and response is mapped accurately,High
 TC-PAY-015,Resilience,Customer cancels transaction,Transaction is in progress,Transaction stops safely and consistent cancel result returns to all layers,Medium
+TC-PAY-016,Purchase,Duplicate purchase retry,Original result is uncertain,No unintended second financial posting,Critical
+TC-PAY-017,Purchase,Invalid amount,Invalid amount can be entered,Validation blocks transaction at correct layer,High
+TC-PAY-018,Refund,Refund exceeds original amount,Approved original transaction exists,Refund is rejected and original remains unchanged,High
+TC-PAY-019,Reversal,Duplicate reversal prevention,Original transaction is eligible for recovery,Repeated recovery does not create uncontrolled duplicate reversals,Critical
+TC-PAY-020,Settlement,Settlement host timeout,Open batch exists,Batch is not cleared until final settlement status is known,Critical
+TC-PAY-021,ECR,Malformed ECR request,ECR test tool can send invalid payload,Request is rejected without starting incomplete payment,High
+TC-PAY-022,Resilience,POS restart during uncertain transaction,Transaction can be interrupted before final response,Application recovers or resolves final state without duplicate financial impact,Critical
