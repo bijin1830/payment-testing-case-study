@@ -5,9 +5,9 @@
 ![ISO 8583](https://img.shields.io/badge/ISO-8583-2EA44F)
 ![EMV](https://img.shields.io/badge/EMV-Testing-F59E0B)
 ![API Testing](https://img.shields.io/badge/API-Testing-00A98F)
-![SQL](https://img.shields.io/badge/SQL-Validation-4479A1)
+![SQL](https://img.shields.io/badge/SQL-Basic%20Data%20Checks-4479A1)
 
-A practical **manual payment-testing portfolio project** covering POS transaction flows, ECR integration, ISO 8583 validation, EMV checks, refunds, voids, reversals, fallback, settlement, SQL validation and incident investigation.
+A practical **manual payment-testing portfolio project** covering POS transaction flows, ECR integration, ISO 8583 validation, EMV checks, refunds, voids, reversals, fallback, settlement, basic SQL/data checks and incident investigation.
 
 > **Privacy note:** All examples are synthetic and generic. No real bank, merchant, terminal, cardholder, production log, credential, key or confidential client information is included.
 
@@ -22,7 +22,7 @@ A practical **manual payment-testing portfolio project** covering POS transactio
 - EMV evidence review
 - Settlement and reconciliation
 - Negative/resilience testing
-- SQL/data validation
+- Basic SQL/data verification
 - Requirement-to-test traceability
 - Defect reporting and root-cause-oriented investigation
 
@@ -50,7 +50,7 @@ A tester should validate more than the final receipt. I correlate the card/EMV r
 - [Transaction Investigation Case Studies](docs/transaction-investigation-case-studies.md)
 - [ISO 8583 Validation](docs/iso8583-validation.md)
 - [EMV Transaction Flow](docs/emv-flow.md)
-- [SQL Validation for Payment QA](docs/sql-validation.md)
+- [Basic SQL Data Checks for Payment QA](docs/sql-validation.md)
 - [Payment QA Traceability Matrix](docs/traceability-matrix.md)
 - [Sample Defect Reports](docs/defect-examples.md)
 - [Payment UAT Checklist](docs/uat-checklist.md)
@@ -69,7 +69,7 @@ A tester should validate more than the final receipt. I correlate the card/EMV r
 | Settlement | Totals, host timeout, batch close rules |
 | ECR | Mapping, timeout, malformed request, duplicate protection |
 | Resilience | Cancel, restart, network interruption |
-| SQL | Status, duplicates, reversal linkage, settlement totals |
+| Basic SQL checks | Transaction status, references and simple data verification |
 
 ## ISO 8583 validation examples
 
@@ -138,7 +138,7 @@ payment-testing-case-study/
 
 ## Skills represented
 
-`Manual Testing` · `Functional Testing` · `Regression Testing` · `UAT` · `Payments QA` · `POS` · `ECR` · `ISO 8583` · `EMV` · `API Testing` · `SQL Validation` · `Traceability` · `Defect Analysis` · `Production Support`
+`Manual Testing` · `Functional Testing` · `Regression Testing` · `UAT` · `Payments QA` · `POS` · `ECR` · `ISO 8583` · `EMV` · `API Testing` · `Basic SQL Data Verification` · `Traceability` · `Defect Analysis` · `Production Support`
 
 ## Author
 
