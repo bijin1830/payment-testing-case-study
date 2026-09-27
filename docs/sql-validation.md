@@ -1,12 +1,12 @@
-# SQL Validation for Payment QA
+# Basic SQL Data Checks for Payment QA
 
-This guide demonstrates the type of database validation I perform during payment testing and incident investigation.
+This guide demonstrates simple SQL/data checks that can support payment testing and incident investigation. It is intended as basic QA-level database verification, not advanced SQL or database engineering.
 
 > Queries are intentionally generic. They do not reference any real client schema, credentials or production data.
 
-## What I validate
+## Basic checks I can perform
 
-Typical checks include:
+Examples of basic checks include:
 
 - Transaction status
 - Amount and currency
@@ -75,7 +75,7 @@ GROUP BY terminal_id, amount, stan
 HAVING COUNT(*) > 1;
 ```
 
-## Validate reversal linkage
+## Example: check reversal linkage
 
 ```sql
 SELECT
@@ -90,7 +90,7 @@ LEFT JOIN payment_transaction reversal
 WHERE original.rrn = 'SYNTHETIC_RRN';
 ```
 
-## Validate settlement totals
+## Example: check settlement totals
 
 ```sql
 SELECT
@@ -104,9 +104,9 @@ WHERE batch_no = 101
 GROUP BY batch_no, transaction_type;
 ```
 
-## QA interpretation
+## How I use these checks in QA
 
-Database validation should not be used in isolation. I compare DB state with:
+These basic database checks should not be used in isolation. I compare DB state with:
 
 1. POS result
 2. ECR result

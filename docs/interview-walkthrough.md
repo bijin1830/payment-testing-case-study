@@ -11,7 +11,7 @@ A synthetic manual QA portfolio that demonstrates how I test and investigate POS
 - ISO 8583
 - EMV
 - API
-- SQL
+- Basic SQL/data verification
 - Settlement
 - Reversal/recovery
 
@@ -29,7 +29,7 @@ My investigation approach:
 6. Verify whether POS stored the approval.
 7. Check why the final ECR response was not delivered.
 8. Confirm whether reversal or inquiry is required.
-9. Validate DB and settlement state.
+9. Perform basic database/status checks where access is available and validate settlement state.
 10. Prevent retry from causing a duplicate charge.
 
 ## 3. What makes payment testing different?
